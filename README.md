@@ -26,7 +26,7 @@ Route Handlers(route.ts, route.js)를 이용하여 API를 개발시 GET 메소�
 
 1. 캐싱이 되는 경우 : GET 메소드를 사용하며 header, cookie 또는 요청 파라미터 관련 로직이 없음
 
-   [테스트 : 순수 GET - 캐싱됨, 랜덤값이 변경되지 않음](https://test-nextjs-route-caching-qsiqbhxos-mojomoths-projects.vercel.app/test/simple1)
+   [테스트 : 순수 GET - 캐싱됨, 랜덤값이 변경되지 않음](https://test-nextjs-route-caching-fdvsqueen-mojomoths-projects.vercel.app/test/simple1)
 
    ```
    export async function GET() {
@@ -40,7 +40,7 @@ Route Handlers(route.ts, route.js)를 이용하여 API를 개발시 GET 메소�
 
 2. 캐싱이 되는 않은 경우 : GET 메소드를 사용하지만 스크립트에 POST 메소드가 함께 있음
 
-   [테스트 : 스크립트에 GET, POST 동시 존재 - 캐싱되지 않음, 랜덤값이 변경됨](https://test-nextjs-route-caching-qsiqbhxos-mojomoths-projects.vercel.app/test/simple2)
+   [테스트 : 스크립트에 GET, POST 동시 존재 - 캐싱되지 않음, 랜덤값이 변경됨](https://test-nextjs-route-caching-fdvsqueen-mojomoths-projects.vercel.app/test/simple2)
 
    ```
    export async function GET() {
@@ -58,7 +58,7 @@ Route Handlers(route.ts, route.js)를 이용하여 API를 개발시 GET 메소�
 
 3. 캐싱이 되는 않은 경우 : GET 메소드를 사용하지만 스크립트에 headers함수가 존재함
 
-   [테스트 : headers 함수 - 캐싱되지 않음, 랜덤값이 변경됨](https://test-nextjs-route-caching-qsiqbhxos-mojomoths-projects.vercel.app/test/simple3)
+   [테스트 : headers 함수 - 캐싱되지 않음, 랜덤값이 변경됨](https://test-nextjs-route-caching-fdvsqueen-mojomoths-projects.vercel.app/test/simple3)
 
    ```
    import { headers } from "next/headers";
@@ -78,7 +78,7 @@ Route Handlers(route.ts, route.js)를 이용하여 API를 개발시 GET 메소�
    테스트 : 순수 POST - 캐싱되지 않음, 랜덤값이 변경됨
 
    ```
-   curl -XPOST https://test-nextjs-route-caching-qsiqbhxos-mojomoths-projects.vercel.app/test/simple4
+   curl -XPOST https://test-nextjs-route-caching-fdvsqueen-mojomoths-projects.vercel.app/test/simple4
    ```
 
    ```
@@ -94,7 +94,7 @@ Route Handlers(route.ts, route.js)를 이용하여 API를 개발시 GET 메소�
 
 5. 캐싱이 되는 않은 경우 : GET 메소드를 사용하지만 쿼리 파라미터 로직이 존재
 
-   [테스트 : query paramter - 캐싱되지 않음, 랜덤값이 변경됨](https://test-nextjs-route-caching-qsiqbhxos-mojomoths-projects.vercel.app/test/simple3)
+   [테스트 : query paramter - 캐싱되지 않음, 랜덤값이 변경됨](https://test-nextjs-route-caching-fdvsqueen-mojomoths-projects.vercel.app/test/simple5?q=1)
 
    ```
    import { type NextRequest } from "next/server";
@@ -113,7 +113,7 @@ Route Handlers(route.ts, route.js)를 이용하여 API를 개발시 GET 메소�
 
 6. 캐싱이 되는 않은 경우 : GET 메소드를 사용하지만 파라미터 라우터를 사용
 
-   [테스트 : query paramter - 캐싱되지 않음, 랜덤값이 변경됨](https://test-nextjs-route-caching-qsiqbhxos-mojomoths-projects.vercel.app/test/simple1/test)
+   [테스트 : query paramter - 캐싱되지 않음, 랜덤값이 변경됨](https://test-nextjs-route-caching-fdvsqueen-mojomoths-projects.vercel.app/test/simple1/test)
 
    ```
    import { type NextRequest } from "next/server";
